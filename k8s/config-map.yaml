@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: istio-example
+  name: master
+data:
+  master-dev.yaml: |-
+    test:
+      dev:
+        value: application-dev-profile11
+
+    k8s:
+      value: k8s2
+  master.yaml: |-
+    test:
+      application:
+        value: application-profile1
+    spring:
+      profiles:
+        active: dev
+  

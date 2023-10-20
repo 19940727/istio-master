@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: istio-example
+  name: master
+  labels:
+    app: master
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: master
+  template:
+    metadata:
+      name: master
+      labels:
+        app: master
+    spec:
+      serviceAccountName: spring-cloud-kubernetes
+      containers:
+        - name: master
+          image: harbor/docker/master:0.1
+          imagePullPolicy: Always
+      restartPolicy: Always
+      
