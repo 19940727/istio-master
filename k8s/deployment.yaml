@@ -19,7 +19,7 @@ spec:
       serviceAccountName: spring-cloud-kubernetes
       containers:
         - name: master
-          image: harbor/docker/master:0.1
+          image: master
           imagePullPolicy: Always
       restartPolicy: Always
       
