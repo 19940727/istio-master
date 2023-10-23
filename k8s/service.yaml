@@ -9,5 +9,5 @@ spec:
   ports:
     - protocol: TCP
       port: 8080
-  type: ClusterIP
+  type: NodePort
   
