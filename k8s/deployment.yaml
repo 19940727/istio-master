@@ -20,5 +20,5 @@ spec:
       containers:
         - name: master
           image: docker.io/springcloud/master:0.0.1-SNAPSHOT
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
       restartPolicy: Always
