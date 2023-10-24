@@ -16,11 +16,6 @@ spring:
         namespace: istio-example
         enabled: true
 
-      client:
-        master-url: "https://k8s-local:6443"
-        trust-certs: true
-        namespace: istio-example
-        oauth-token: token
       discovery:
         enabled: true
         all-namespaces: false
@@ -44,4 +39,4 @@ management:
 
 logging:
   level:
-    org.springframework.cloud: debug
+    org.springframework.cloud: info
