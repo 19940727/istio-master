@@ -25,10 +25,10 @@ public class CloudNativeClientDefinitionRegistrar implements ImportBeanDefinitio
 
         CloudNativeClientScanner cloudNativeClientScanner = new CloudNativeClientScanner(registry);
         cloudNativeClientScanner.addIncludeFilter((metadataReader, metadataReaderFactory) ->
-                metadataReader.getAnnotationMetadata().hasAnnotation("cn.ways.master.client.CloudNativeExchange")
+                metadataReader.getAnnotationMetadata().hasAnnotation("istio.example.master.client.CloudNativeExchange")
         );
 
-        Set<BeanDefinition> candidateComponents = cloudNativeClientScanner.findCandidateComponents("cn.ways.master.client");
+        Set<BeanDefinition> candidateComponents = cloudNativeClientScanner.findCandidateComponents("istio.example.master.client");
 
         for (BeanDefinition candidateComponent : candidateComponents) {
 
