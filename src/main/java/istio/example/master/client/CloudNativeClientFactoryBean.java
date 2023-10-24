@@ -1,4 +1,4 @@
-package cn.ways.master.client;
+package istio.example.master.client;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.FactoryBean;
