@@ -19,7 +19,6 @@ spec:
       serviceAccountName: spring-cloud-kubernetes
       containers:
         - name: master
-          image: master
-          imagePullPolicy: Always
+          image: docker.io/springcloud/master:0.0.1-SNAPSHOT
+          imagePullPolicy: IfNotPresent
       restartPolicy: Always
-      

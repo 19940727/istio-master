@@ -17,7 +17,7 @@ spring:
         enabled: true
 
       client:
-        master-url: "https://k8s-local:6443"
+        master-url: "https://172.18.0.3:6443"
         trust-certs: true
         namespace: istio-example
         oauth-token: token
