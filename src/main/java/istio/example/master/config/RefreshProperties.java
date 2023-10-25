@@ -15,4 +15,5 @@ public class RefreshProperties {
 
     @Value("${test.application.value}")
     private String applicationValue;
+
 }

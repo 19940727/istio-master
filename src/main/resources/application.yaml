@@ -8,14 +8,13 @@ spring:
     import: 'kubernetes:'
 
   cloud:
-    config:
-      enabled: false
     kubernetes:
       config:
-        name: master
         namespace: istio-example
         enabled: true
-
+      secrets:
+        namespace: istio-example
+        enable-api: true
       discovery:
         enabled: true
         all-namespaces: false
